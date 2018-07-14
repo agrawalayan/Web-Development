@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Console</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="./vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="./dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="./vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	
+	
+	
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a id="a_home" class="navbar-brand" href="#"><i class="fa fa-desktop fa-fw "></i> Console</a>
+        </div>
+        <!-- /.navbar-header -->
+
+        <ul class="nav navbar-top-links navbar-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-archive fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                
+                <!-- /.dropdown-messages -->
+            </li>
+            <!-- /.dropdown -->
+            
+            <!-- /.dropdown -->
+            
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <!--<li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                    </li>
+                    <li class="divider"></li> -->
+                    <li><a id="a_logout" href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+        <!-- /.navbar-top-links -->
+
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a href="#" id="a_manage_plugins"><i class="fa fa-cubes fa-fw"></i> Manage Plugins</a>
+                    </li>
+					<li>
+						<a href ="#" onclick="enrolment_plugin()"><i class="fa fa-cubes fa-fw"></i> Enrolment Plugin </a> 
+					</li>
+					<li>
+						<a href ="#" onclick="sms_plugin()"><i class="fa fa-cubes fa-fw"></i> Rapid SMS Plugin </a>
+	
+					</li>
+					<li>
+						<a href ="#" onclick="scheduler_plugin()"><i class="fa fa-cubes fa-fw"></i> Scheduler Plugin </a>
+						
+					</li>
+					<li>
+					<a href="https://s3.amazonaws.com/participants-record/EnrollmentRecord.csv"> Download Participants Details CSV File</a>
+					</li>
+					<li>
+					<a href="https://s3.amazonaws.com/rapid-sms/ParticipantRecord.csv"> Download Schedule CSV File</a>
+					</li>
+                </ul>
+            </div>
+			
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.navbar-static-side -->
+    </nav>
+
+    <div id="page-wrapper">
+
+        <iframe id="page-wrapper-plugin" frameBorder="0" width="100%" height="1000" style="display: none" src="">
+
+        </iframe>
+
+        <div id="page-wrapper-add-plugin" style="display: none">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header"><i class="fa fa-cube fa-fw"></i> Add New Plugin</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="panel panel-green">
+
+                        <div class="panel-heading">
+                            Page URL
+                        </div>
+
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <input id="input_plugin_url" class="form-control" placeholder="Enter Plugin URL here"/>
+
+                                <br />
+                                <button id="btn_add_plugin" class="btn btn-info btn-block">Add</button>
+                                <button id="btn_cancel_add" class="btn btn-warning btn-block">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-wrapper-manage-plugins" style="display: none">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <h1 class="page-header"><i class="fa fa-cubes fa-fw"></i> Manage Plugins</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="panel panel-info">
+
+                        <div class="panel-body">
+                            <button id="btn_new_plugin" class="btn btn-primary btn-block">Add New Plugin</button>
+
+                            <br />
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>Plugin Name</th>
+                                        <th>Permissions</th>
+                                        <th>Remove</th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody id="tbody_plugins">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-wrapper-home">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header"><i class="fa fa-desktop fa-fw"></i> Console</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <!-- /.col-lg-8 -->
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-wrench fa-fw"></i> Basic Controls
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-archive fa-fw"></i> 0 Notes
+                                    <span class="pull-right text-muted small"><em>0 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-tasks fa-fw"></i> 0 Surveys Ongoing
+                                    <span class="pull-right text-muted small"><em>0 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-envelope fa-warning"></i> 0 Warnings
+                                    <span class="pull-right text-muted small"><em>0 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-bug fa-fw"></i> 0 Errors
+                                    <span class="pull-right text-muted small"><em>0 minutes ago</em>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-sign-out fa-fw"></i> Logout
+                                    <span class="pull-right text-muted small"><em>Logged in since </em>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- Metis Menu Plugin JavaScript -->
+ 
+<script src="./vendor/metisMenu/metisMenu.js"></script>
+
+<!-- jQuery -->
+ 
+<script src="./vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+ 
+<script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+ 
+<script src="./dist/js/sb-admin-2.js"></script>
+
+<!-- Cookie javascript -->
+
+<script src="./js/js.cookie.js"></script>
+
+
+<!-- Index javascript -->
+<script src="./js/index.js"></script>
+</body>
+
+</html>
