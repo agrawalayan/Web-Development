@@ -1,0 +1,157 @@
+@media all and (max-width: 1152px) and (min-width: 1024px) {
+	.cus_container{width:98%;margin-left:15px ;margin-right:15px;}
+	.navbar-nav > li > a {font-size: 14px;}
+	.navbar-right { margin-left: 60px}
+	.login {margin-right: 15px;}
+	.navbar-nav > li > a {padding: 24px 0;margin: 0 10px;}
+}
+
+
+@media all and (max-width: 1123px) and (min-width: 991px) {
+	.navbar-nav > li > a {font-size: 13px}
+	.navbar-right { margin-left: 20px;}
+	.login {margin-right: 15px;}
+	.navbar-nav > li > a {padding: 24px 0;margin: 0 5px }
+	.navbar-default .navbar-brand { background-size: 85%;}
+	.navbar-brand {width: 180px ;margin-top: 10px;}
+	.cus_btn {padding: 5px 10px;background: #F4F4F2; border-radius: 2px;}
+	.cus_container{width:98%;margin-left:15px; margin-right:15px;}
+	.productinfo h4{font-size: 14px;}
+}
+
+
+
+@media all and (max-width: 990px) and (min-width: 801px) {	
+	.thumbnail_cus{padding: 5px;
+	width: 85%;}
+	.navbar-nav > li > a {font-size: 11px}
+	.navbar-right { margin-left: -20px;}
+	.login {margin-right: -3px;}
+	.navbar-nav > li > a {padding: 24px 0;margin: 0 6px }
+	.navbar-default .navbar-brand { background-size: 75%;}
+	.navbar-brand {width: 180px ;margin-top: 10px;}
+	.cus_btn {padding: 5px 5px;background: #F4F4F2; border-radius: 2px;font-size: 12px;}
+	.cus_container{width:98%;margin-left:15px; margin-right:15px;}
+	.portImg{height: 75px;text-align:center;}
+	.home-alice .textillate, .home-mary .textillate, .home-suzi .textillate {font-size: 28px;line-height: 32px;width: 90%;position:relative;top:75px;}
+	.about_txt { padding: 150px 0 20px 0; font-size: 28px;line-height: 1.4;}
+	h1{font-size: 28px;}
+	.container{width:98%;}
+	.thumbnail_cus img{padding:5px;}
+	.team_heading {font-size: 14px; color: #000;}
+	.team_heading strong { font-weight: 400;  line-height: 1.4;}
+	.portimg {width: 100%;}
+	.jcarousel li{width: 280px!important;}
+	.img-circle-custom {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.Financepadding-img {
+    width: 88%;
+    margin: 0 auto;
+}
+}
+
+@media all and (max-width: 799px) and (min-width: 769px) {	
+.navbar-default .navbar-brand {
+    background-size: 75%;
+}
+}
+/*@media only screen and (max-width : 768px) {
+	
+	.navbar-nav > li > a {font-size: 11px}
+	.navbar-right { margin-left: 0%;}
+	.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: -24px;
+}
+	.login {margin-right: 15px;}
+	.navbar-nav > li > a {padding: 24px 0;margin: 0 5px }
+	.navbar-default .navbar-brand { background-size:100%;}
+	.navbar-brand {width:160px!important ;margin-top: 10px;}
+	.cus_btn {padding: 5px 5px;background: #F4F4F2; border-radius: 2px;font-size: 12px;}
+	.cus_container{width:98%;margin-left:15px; margin-right:15px;}
+	.portImg{height: 75px;text-align:center;}
+	.home-alice .textillate, .home-mary .textillate, .home-suzi .textillate {font-size: 28px;line-height: 32px;width: 90%;position:relative;top:75px;}
+	.about_txt { padding: 150px 0 20px 0; font-size: 28px;line-height: 1.4;}
+	h1{font-size: 28px;}
+	.container{width:98%;}
+	.thumbnail_cus img{padding:5px;}
+	.team_heading {font-size: 14px; color: #000;}
+	.team_heading strong { font-weight: 400;  line-height: 1.4;}
+	.portimg {width: 100%;}
+	#about-section{background-size: 100% 120%;;min-height: 65%;}
+	#strategy-section {background-size: 100% 190%;;  min-height: 65%;  padding: 100px 0px 0px 0;}
+	#value-section { padding: 100px 0px 20px 0; min-height: 0;}
+	.detailbase-7{margin-left:0;}
+	.detailbase-4 {margin: 15px 0; margin-left: 0;}
+	.navbar-default .navbar-brand {
+    background-size: 100%;
+}
+.back_btn {
+     margin-left: 0; 
+    margin-top: 15px;    
+}
+.back_btn a span {
+  
+    padding: 10px;
+}
+.newdetail p {
+  
+    padding-bottom: 15px;
+}
+.stra_txt {
+    height: 50px;
+}
+.features-title { margin: 15px 0;}
+.shiftRight{float: left;}
+#Consumer_id .col-sm-push-1 {left:10%;}
+
+    #Financial_id .col-sm-push-3 {left:13%;}
+
+    #Information_id .col-sm-push-2{left:0%;}
+    #Niche_id .col-sm-push-5{left:41%;}
+
+   .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    margin-left: 0px;
+}
+	
+
+
+	
+}
+*/
+
+
+
+/*@media only screen and (max-width : 767px) {
+.navbar-default .navbar-brand{width:75%;}
+.navbar-toggle {margin-top: 15px;border: none;}
+.navbar-toggle:hover, .navbar-toggle:focus {background-color: rgba(0, 0, 0, 0)!important;}
+.navbar-toggle .icon-bar {height: 3px;}
+.navbar-default .navbar-toggle .icon-bar {background-color: #FFF!important;}
+.navbar-transparent .navbar-toggle .icon-bar {background-color: #FFF!important;}
+.navbar-inverse .navbar-toggle .icon-bar {background-color: #FFF!important;}
+.navbar-collapse {border-width: 2px;}
+.navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {max-height: 440px;}
+.navbar-inverse .navbar-collapse {background-color: #111;}
+.navbar-nav > li > a {padding: 10px 0!important;color: #FFF;}
+.navbar-nav .open .dropdown-menu > li > a {padding: 10px 10px 10px 45px!important;	}
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav .open .dropdown-menu > li > a {color: #222;}
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {color: #CCC;}
+.navbar-default.navbar-shrink .navbar-nav > li.active > a {-webkit-box-shadow: none!important;-moz-box-shadow: none!important;box-shadow: none!important;}
+.navbar-shrink .navbar-toggle .icon-bar {background-color: #FFF !important;}
+.navbar-inverse.navbar-shrink .navbar-toggle .icon-bar {background-color: #FFF !important;}
+.portimg {margin: 0 auto;width:25%;}
+.navbar-brand, .navbar-brand:focus {margin-left: 10px;}
+.popup-inner_logo img {float: left;margin-right: 18px;width: 35%; border-radius: 3px;}
+.home-alice .textillate, .home-mary .textillate, .home-suzi .textillate {font-size: 28px;line-height: 32px;width: 90%;position:relative;top:75px;}
+.about_txt {padding: 120px 0 20px 0;font-size: 24px; line-height: 1.4;}
+h1{font-size: 24px;padding:0 25px;}
+.thumbnail_cus img { margin: 0 auto;width: 25%;}
+.height_margin{height:10px;}
+.pull-right { float: none!important;margin-top: 25px;}
+}*/
+
+
+
+
